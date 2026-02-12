@@ -4,8 +4,11 @@ Integrantes:
     Brian Orta 21-10447
 
 PARA COMPILAR EL PROGRAMA (Desde terminal en Linux)
+
     1- Abrir la terminal de la distribución Linux correspondiente
+
     2- Ingresar en la carpeta en la que se encuentre el proyecto con el comando cd
+
     3- Escribir el comando 'make' en la terminal
 
 El programa cuenta con dos librerías: Grafo.kt y ListaAdyacenciaGrafo.kt
