@@ -1,7 +1,7 @@
 import java.io.File
 import java.io.BufferedReader
 
-fun loadGraph(): ListaAdyacenciaGrafo<String> {
+fun loadGraph(): Grafo<String> {
     val file = File("input.txt")
     val reader = file.bufferedReader()
     val graph = ListaAdyacenciaGrafo<String>()
