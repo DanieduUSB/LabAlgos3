@@ -20,8 +20,8 @@ Instrucciones para CORRER el programa (Desde terminal en Linux)
 
 Instrucciones cadena de enteros
 
-    La cadena de enteros representa un tablero de sudoku, en donde cada 9 números es una línea del sudoku y
-    las líneas se van colocando en orden desde arriba hacia abajo. La cadena debe tener longitud 81. Cada
+    La cadena de enteros representa un tablero de sudoku, en donde cada 9 números es una fila del sudoku y
+    las filas se van colocando en orden desde arriba hacia abajo. La cadena debe tener longitud 81. Cada
     número debe estar entre 0 y 9, de manera que si un número es 0, indica que la casilla correspondiente es
     vacía, en caso contrario, la casilla contiene el número indicado.
 
@@ -82,3 +82,10 @@ Programa
     -isValid(sudoku: CharArray, pos: Int, number: Char): Boolean Verifica si puede colocar 'number' en 'sudoku[pos]',
     para lo cual se para en la primera posición de la fila, columna y bloque de 'pos', y verifica que ningún otro número
     en estos sea igual a 'number'.
+
+Complejidad del programa
+    
+    La entrada inicial es una cadena de texto de 81 caracteres, de manera que podemos definir nuestro n=81 un tamaño
+    fijo de entrada. La verificación de la entrada es O(n), mientras que la función que resuelve el sudoku es O(9^(n-k)),
+    donde k representa el número de recuadros del sudoku que ya contienen un número entre el 1 y el 9. Por lo tanto, el
+    programa es O(9^(n-k)).

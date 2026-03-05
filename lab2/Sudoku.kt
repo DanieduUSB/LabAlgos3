@@ -1,13 +1,9 @@
 fun validEntry(chain: String): Boolean {
 	
-	for (row in 0 until 9) {
-		if (!validRow(chain,row)) return false
-	}
-	for (col in 0 until 9) {
-		if (!validCol(chain,col)) return false
-	}
-	for (block in 0 until 9) {
-		if (!validBlock(chain,block)) return false
+	for (i in 0 until 9) {
+		if (!validRow(chain,i)) return false
+		if (!validCol(chain,i)) return false
+		if (!validBlock(chain,i)) return false
 	}
 
 	return true
@@ -88,17 +84,17 @@ fun isValid(sudoku: CharArray, pos: Int, number: Char): Boolean {
 	var aux = 0
 
 	repeat(9) {
-		if (pos != rowCheckIndex && sudoku[rowCheckIndex] == number) return false
+		if (sudoku[rowCheckIndex] == number) return false
 		rowCheckIndex = rowCheckIndex + 9
 
-		if (pos != colCheckIndex && sudoku[colCheckIndex] == number) return false
+		if (sudoku[colCheckIndex] == number) return false
 		colCheckIndex++
 		
 		if (aux == 3) {
 			aux = 0
 			blockCheckIndex = blockCheckIndex + 6
 		}
-		if (pos != blockCheckIndex && sudoku[blockCheckIndex] == number) return false
+		if (sudoku[blockCheckIndex] == number) return false
 		blockCheckIndex++
 		aux++
 	}
